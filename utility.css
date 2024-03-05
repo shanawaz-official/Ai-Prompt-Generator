@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Mulish:wght@300&family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap');
+
+
+
+:root {
+ --bs-dark-color: #1A1D20;
+  --bs-one-primary: #080808;
+  --text-color-main: #fff;
+  --bs-second-primary: #14EBF6;
+  --secondary-color: #29A9FD;
+  --bs-supporting-color: #C850C0;
+  --text-color-primary: #15EFE4
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-color {
+  color: var(--text-color-primary);
+}
+
+.text-color-main {
+  color: var(--text-color-main);
+}
+
+.text-align {
+  text-align: center;
+}
+
+.text-none{
+  text-decoration: none;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+
+.width-100 {
+  width: 100%;
+}
+
+
+/*display*/
+.r-reverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.d-grid{
+  display: grid;
+}
+.d-block{
+  display: block;
+}
+.d-flex{
+  display: flex;
+}
+.hidden {
+  visibility: hidden;
+}
+
+
+/*margin*/
+.mt-150{
+  margin-top: 150px;
+}
+.mt-200{
+  margin-top: 200px;
+}
+.mt-300 {
+  margin-top: 300px;
+}
+.mt-400 {
+  margin-top: 400px;
+}
+.mt-500 {
+  margin-top: 500px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-90 {
+  margin-top: 90px;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-70 {
+  margin-top: 70px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mt-5{
+  margin-top: 5px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-5{
+  margin-bottom: 5px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-100 {
+  margin-bottom: 100px;
+}
+.m-auto{
+  margin: auto;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+
+/*spacing*/
+.s-evenly{
+  justify-content: space-evenly;
+}
+.s-around {
+  justify-content: space-around;
+}
+.s-between {
+  justify-content: space-between;
+}
+.center{
+  justify-items: center;
+}
+.c-center{
+  justify-content: center;
+}
+.a-center{
+  align-items: center;
+}
+
+/* css grids*/
+.four-grid-column{
+  grid-template-columns: repeat(4, 1fr);
+}
+.three-grid-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+.tow-grid-column{
+grid-template-columns: repeat(3, 1fr);
+}
+
+/*positions*/
+.p-absolute{
+  position: absolute;
+}
+.p-relative {
+  position: relative;
+}
+/*bot styling*/
+#output {
+  height: 47vh;
+  border: 2px solid black;
+  width: 99%;
+}
+/*font size*/
+.rem-1{
+  font-size: 1rem;
+}
+.rem-1-5 {
+  font-size: 1.5rem;
+}
+.rem-2 {
+  font-size: 2rem;
+}
+
+
+.bot-main{
+  width: 80%;
+}
+

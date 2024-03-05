@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>AI Prompt Generator for Email Writing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="utility.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-color py-4 pt-lg-5">
+    <div class="container">
+      <a class="navbar-brand text-color fw-bold" href="#"><span class="max">AI Prompt</span> Generator</a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class=" nav-item">
+            <a aria-current="page" class="nav-link active" href="#">Home</a>
+          </li>
+          <li class=" nav-item">
+            <a class=" nav-link" href="#about">About</a>
+          </li>
+          <li class=" nav-item">
+            <a class=" nav-link" href="#online_services">Services</a>
+          </li>
+          <li class=" nav-item">
+            <a class=" nav-link" href="/contact.html">Contact</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- main aria start -->
+  <main class="bot-main m-auto">
+    <h2 class="mb-20 rem-1-5 text-align">Generate Prompt to Write Best Email</h2>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Product/Topic</label>
+    <input type="text" class="form-control prompt1" id="formGroupExampleInput1" placeholder="Write The Topic/Product Name Here!">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Niche</label>
+    <input type="text" class="form-control prompt2" id="formGroupExampleInput2" placeholder="Write The Niche Here!">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Audience </label>
+    <input type="text" class="form-control prompt3" id="formGroupExampleInput3" placeholder="Write Targeted Audience Here!">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Call To Action</label>
+    <input type="text" class="form-control prompt4" id="formGroupExampleInput4" placeholder="paste link, make a purchase, sign up for a webinar etc.">
+  </div>
+  
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button id="submitBtn" class="btn btn-primary" type="button" onclick="run()">Submit</button>
+  </div>
+  <br>
+  <br>
+
+  <iframe id="output"></iframe>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button" id="copyBtn" onclick="copyOutputText('output')" >Copy</button>
+    </div>
+
+  </main>
+  <!-- main aria end -->
+
+  <!-- footer start -->
+  <footer class="footer-section mt-50 width-100">
+    <br>
+    <div class="footer-top d-grid three-grid-column p-relative center mt-10">
+      <div class="footer-about s-evenly c-center">
+        <h3 class="">About</h3>
+        <p class="text-left text-color">This is a Free AI Prompt Generator Tool for Email Writing</p>
+      </div>
+
+      <div class="social-links">
+        <h3>Follow us</h3>
+        <ul class="social-link-list">
+          <li><a href="/"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="/"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="/"><i class="bi bi-twitter"></i></a></li>
+
+        </ul>
+      </div>
+      <div class="footer-address">
+        <h3>For Any Query</h3>
+        <ul>
+          <li>
+            <!-- https://api.whatsapp.com/send?phone=918445039331&text=MyQuery:- -->
+            <a href="https://api.whatsapp.com/send?phone=918445039331&text=MyQuery:-"><i class="bi bi-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="tel:+9100000000"><i class="bi bi-telephone"></i></a>
+          </li>
+          <li>
+            <a href="mailto:mail@example.com"><i class="bi bi-envelope-at"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom p-relative  container-box ">
+      <div class="credits">
+        <span class="t-center">Copyright &copy; 2023-24 All Rights Reserved </span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- footer end -->
+  <script>
+
+function run() {
+
+let submitBtn=document.getElementById('submitBtn').style.backgroundColor = "green";
+
+
+  let productName = document.getElementById('formGroupExampleInput1');
+  let nicheName = document.getElementById('formGroupExampleInput2');
+  let audienceName = document.getElementById('formGroupExampleInput3');
+  let linkName = document.getElementById('formGroupExampleInput4');
+
+let product=productName.value;
+let niche=nicheName.value;
+let audience=audienceName.value;
+let link=linkName.value;
+
+  const mainPrompt = `Write a professional email for ${product} to ${niche} targeting ${audience} with a clear call to action.
+
+Instructions to Write Email:
+- Start the email with a personalized greeting to make the recipient feel valued.
+- Clearly and concisely introduce the product or topic, highlighting its key features or benefits.
+- Customize the content to resonate with the needs and interests of the target audience.
+- Include a compelling call to action that encourages the recipient to take the desired action ${link}.
+- Maintain a professional and friendly tone throughout the email.
+- Keep the email length concise and easy to read.
+- Proofread the email for grammar and spelling errors before finalizing it.
+
+The email should effectively engage the target audience, generate interest in the ${product}, and motivate them to take the desired action specified in the call to action.`;
+
+  document.getElementById('output').srcdoc = mainPrompt;
+}
+
+function copyOutputText(output) {
+  const text = document.getElementById(output).srcdoc;
+
+  const textarea = document.createElement("textarea");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = 0;
+  textarea.value = text;
+
+  document.body.appendChild(textarea);
+
+  textarea.select();
+
+  document.execCommand("copy");
+
+  document.body.removeChild(textarea);
+
+  const copyBtn = document.getElementById("copyBtn");
+copyBtn.style.backgroundColor = "green";
+copyBtn.innerText="Copied";
+
+}
+
+
+
+
+  </script>
+
+  <!-- bootstrap js script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>

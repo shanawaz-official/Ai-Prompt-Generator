@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Mulish:wght@300&family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --bs-dark-color: #1A1D20;
+  --bs-one-primary: #080808;
+  --text-color-main: #fff;
+  --bs-second-primary: #14EBF6;
+  --secondary-color: #29A9FD;
+  --bs-supporting-color: #C850C0;
+  --text-color-primary: #15EFE4
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--bs-dark-color);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  line-height: 3rem;
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--bs-dark-color);
+  letter-spacing: 0.07rem;
+  line-height: 1.55rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-main {
+  height: 80vh;
+  position: relative;
+}
+
+.bg-color {
+  background-color: var(--bs-one-primary);
+}
+
+.bg-theme {
+
+  color: var(--bs-supporting-color);
+  background-image: none !important;
+}
+
+.fa-star {
+  color: var(--bs-supporting-color);
+}
+
+.nav-link {
+  color: var(--text-color-main) !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+.max {
+  color: var(--text-color-main);
+}
+
+/*intro section style */
+
+.intro-section .container {
+  display: grid;
+  place-items: center;
+  height: inherit;
+}
+
+
+.intro-image--section {
+  width: 30rem;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+
+  .intro-image--section {
+    width: 25rem;
+    border-radius: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .intro-section {
+    height: 80vh;
+  }
+
+  .intro-image--section {
+    width: 20rem;
+    border-radius: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width: 998px) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  section .common-heading {
+    font-size: 2rem;
+  }
+
+  section .para-width {
+    width: auto;
+  }
+
+  .intro-section {
+    height: 100vh;
+  }
+
+  .navbar-toggler {
+    border-color: var(--text-color-main);
+  }
+
+  .navbar-toggler-icon {
+    background-color: var(--text-color-main);
+  }
+
+}
+
+.intro-btn {
+  background-color: var(--text-color-primary);
+  color: #fff;
+}
+
+.intro-btn:hover {
+  background-color: var(--bs-one-primary);
+  border: 0.5px solid #fff;
+}
+
+/*services section start*/
+.service-container {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.service-box {
+  width: 28%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-right: 1%;
+  background: var(--bs-one-primary);
+  border-radius: 10px;
+  transition: 0.9;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-box:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+  cursor: pointer;
+}
+
+.service-box img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.service-box h3,
+p {
+  font-family: 'Lexend Deca', sans-serif;
+
+  text-align: center;
+  color: var(--text-color-main);
+}
+
+.service-box p {
+  font-size: 15px;
+  padding: 0 5px;
+
+}
+
+@media (max-width: 800px) {
+  .service-container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-container {
+    width: 85%;
+    /*display: block;*/
+    flex-direction: column;
+
+  }
+
+  .service-box {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+}
+
+.service-box button {
+  background: var(--text-color-primary);
+  width: 50%;
+  margin: auto;
+  border: 2px solid;
+  border-color: var(--text-color-primary);
+  border-radius: 33px;
+color: var(--bs-one-primary);
+}
+
+.service-box button:hover{
+    background: var(--bs-one-primary);
+color: var(--text-color-primary);
+border-color: var(--text-color-primary);
+}
+
+/*services section end*/
+
+/*Footer start*/
+
+.footer-section {
+  background-color: var(--bs-one-primary);
+  box-sizing: border-box;
+  color: var(--text-color-primary);
+
+}
+
+.footer-section h3 {
+  /*color: var(--text-color-main);*/
+  color: var(--text-color-primary);
+
+}
+
+.footer-top {
+  background-color: var(--bs-one-primary);
+
+}
+
+.social-link-list li {
+  list-style: none;
+}
+
+.social-link-list li a {
+  color: var(--text-color-primary);
+
+}
+
+
+.footer a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+
+}
+
+.footer-bottom {
+  background-color: var(--bs-one-primary);
+  height: 30px;
+  width: 100%;
+}
+
+.footer-address ul li {
+  list-style: none;
+}
+
+.footer-address ul li a {
+  color: var(--text-color-primary);
+
+}
+
+.container-box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .footer-section h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-section h3 {
+    font-style: 18px;
+  }
+
+  /*footer end*/
+
+  /*shape divider start */
+
+  .custom-shape-divider-bottom-1684208460 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1684208460 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-bottom-1684208460 .shape-fill {
+    fill: var(--text-color-main);
+  }
+
+  /*shape dividers end */
+
+
+  .custom-shape-divider-top-1684211116 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1684211116 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-top-1684211116 .shape-fill {
+    fill: var(--text-color-main);
+  }
